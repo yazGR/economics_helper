@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_12_28_011924) do
+ActiveRecord::Schema.define(version: 2024_12_28_205056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,9 @@ ActiveRecord::Schema.define(version: 2024_12_28_011924) do
     t.string "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "payment_method_id"
     t.index ["expensetable_type", "expensetable_id"], name: "index_expenses_on_expensetable"
+    t.index ["payment_method_id"], name: "index_expenses_on_payment_method_id"
     t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
@@ -39,6 +41,14 @@ ActiveRecord::Schema.define(version: 2024_12_28_011924) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["incometable_type", "incometable_id"], name: "index_incomes_on_incometable"
     t.index ["user_id"], name: "index_incomes_on_user_id"
+  end
+
+  create_table "payment_methods", force: :cascade do |t|
+    t.string "name_fr"
+    t.string "name_en"
+    t.string "name_es"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "type_expenses", force: :cascade do |t|
@@ -91,6 +101,7 @@ ActiveRecord::Schema.define(version: 2024_12_28_011924) do
     t.string "role"
   end
 
+  add_foreign_key "expenses", "payment_methods"
   add_foreign_key "expenses", "users"
   add_foreign_key "incomes", "users"
   add_foreign_key "type_expenses_users", "users"

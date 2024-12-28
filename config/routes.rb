@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :payment_methods
   namespace :admin do
     scope "/:locale" do
       resources :users

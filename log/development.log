@@ -2503,3 +2503,97 @@ Processing by Admin::UsersController#new as HTML
 Completed 200 OK in 59ms (Views: 56.3ms | Allocations: 20868)
 
 
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (21.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (10.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "incomes" DISABLE TRIGGER ALL;ALTER TABLE "type_incomes" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "type_incomes_users" DISABLE TRIGGER ALL;ALTER TABLE "type_expenses" DISABLE TRIGGER ALL;ALTER TABLE "type_expenses_users" DISABLE TRIGGER ALL;ALTER TABLE "expenses" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.8ms)[0m  [1m[31mDELETE FROM "expenses";
+DELETE FROM "incomes";
+DELETE FROM "type_expenses";
+DELETE FROM "type_expenses_users";
+DELETE FROM "type_incomes";
+DELETE FROM "type_incomes_users";
+DELETE FROM "users";
+INSERT INTO "expenses" ("id", "user_id", "expensetable_type", "expensetable_id", "amount", "date", "note", "created_at", "updated_at") VALUES (980190962, 980190962, 'Expensetable', 980190962, 9.99, '2024-12-27 20:19:24', 'MyString', '2024-12-28 20:26:58.055047', '2024-12-28 20:26:58.055047'), (298486374, 298486374, 'Expensetable', 298486374, 9.99, '2024-12-27 20:19:24', 'MyString', '2024-12-28 20:26:58.055047', '2024-12-28 20:26:58.055047');
+INSERT INTO "incomes" ("id", "user_id", "incometable_type", "incometable_id", "amount", "date", "note", "created_at", "updated_at") VALUES (980190962, 980190962, 'Incometable', 980190962, 9.99, '2024-12-27 19:46:49', 'MyString', '2024-12-28 20:26:58.074906', '2024-12-28 20:26:58.074906'), (298486374, 298486374, 'Incometable', 298486374, 9.99, '2024-12-27 19:46:49', 'MyString', '2024-12-28 20:26:58.074906', '2024-12-28 20:26:58.074906');
+INSERT INTO "type_expenses" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2024-12-28 20:26:58.081120', '2024-12-28 20:26:58.081120'), (298486374, 'MyString', '2024-12-28 20:26:58.081120', '2024-12-28 20:26:58.081120');
+INSERT INTO "type_expenses_users" ("id", "name", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 980190962, '2024-12-28 20:26:58.086437', '2024-12-28 20:26:58.086437'), (298486374, 'MyString', 298486374, '2024-12-28 20:26:58.086437', '2024-12-28 20:26:58.086437');
+INSERT INTO "type_incomes" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2024-12-28 20:26:58.091820', '2024-12-28 20:26:58.091820'), (298486374, 'MyString', '2024-12-28 20:26:58.091820', '2024-12-28 20:26:58.091820');
+INSERT INTO "type_incomes_users" ("id", "name", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 980190962, '2024-12-28 20:26:58.098298', '2024-12-28 20:26:58.098298'), (298486374, 'MyString', 298486374, '2024-12-28 20:26:58.098298', '2024-12-28 20:26:58.098298');
+INSERT INTO "users" ("id", "name", "last_name", "age", "gender", "email", "username", "password_digest", "family_plan", "property_owner", "properties", "mortgages", "number_mortgages", "own_vehicles", "number_vehicles", "financings", "created_at", "updated_at", "language", "role") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, 'MyString', 'MyString', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2024-12-28 20:26:58.104094', '2024-12-28 20:26:58.104094', DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, 'MyString', 'MyString', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2024-12-28 20:26:58.104094', '2024-12-28 20:26:58.104094', DEFAULT, DEFAULT)[0m
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "incomes" ENABLE TRIGGER ALL;ALTER TABLE "type_incomes" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "type_incomes_users" ENABLE TRIGGER ALL;ALTER TABLE "type_expenses" ENABLE TRIGGER ALL;ALTER TABLE "type_expenses_users" ENABLE TRIGGER ALL;ALTER TABLE "expenses" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePaymentMethods (20241228202810)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (289.6ms)[0m  [1m[35mCREATE TABLE "payment_methods" ("id" bigserial primary key, "name_fr" character varying, "name_en" character varying, "name_es" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228202810"]]
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPaymentMetodeToExpenses (20241228205056)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228205056"]]
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPaymentMetodeToExpenses (20241228205056)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20241228205056"]]
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPaymentMetodeToExpenses (20241228205056)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228205056"]]
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPaymentMetodeToExpenses (20241228205056)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (2.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20241228205056"]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPaymentMetodeToExpenses (20241228205056)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "expenses" ADD "payment_method_id" bigint[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_payment_method_id" ON "expenses" ("payment_method_id")[0m
+  [1m[35m (34.1ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_b1acb7ca87"
+FOREIGN KEY ("payment_method_id")
+  REFERENCES "payment_methods" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228205056"]]
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

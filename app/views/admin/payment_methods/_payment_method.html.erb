@@ -1,0 +1,22 @@
+<div id="<%= dom_id payment_method %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name fr:</strong>
+    <%= payment_method.name_fr %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name en:</strong>
+    <%= payment_method.name_en %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name es:</strong>
+    <%= payment_method.name_es %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this payment method", [:admin, payment_method], class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this payment method", edit_admin_payment_method_path(payment_method), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
