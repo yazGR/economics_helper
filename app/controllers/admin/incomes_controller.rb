@@ -26,7 +26,7 @@ module Admin
   
       respond_to do |format|
         if @income.save
-          format.html { redirect_to @income, notice: "Income was successfully created." }
+          format.html { redirect_to admin_income_url(@income), notice: "Income was successfully created." }
           format.json { render :show, status: :created, location: @income }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ module Admin
     def update
       respond_to do |format|
         if @income.update(income_params)
-          format.html { redirect_to @income, notice: "Income was successfully updated." }
+          format.html { redirect_to admin_income_url(@income), notice: "Income was successfully updated." }
           format.json { render :show, status: :ok, location: @income }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ module Admin
       @income.destroy
   
       respond_to do |format|
-        format.html { redirect_to incomes_path, status: :see_other, notice: "Income was successfully destroyed." }
+        format.html { redirect_to admin_incomes_path, status: :see_other, notice: "Income was successfully destroyed." }
         format.json { head :no_content }
       end
     end

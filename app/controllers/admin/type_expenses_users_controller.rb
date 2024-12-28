@@ -26,7 +26,7 @@ module Admin
   
       respond_to do |format|
         if @type_expenses_user.save
-          format.html { redirect_to @type_expenses_user, notice: "Type expenses user was successfully created." }
+          format.html { redirect_to admin_type_expenses_user_url(@type_expenses_user), notice: "Type expenses user was successfully created." }
           format.json { render :show, status: :created, location: @type_expenses_user }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ module Admin
     def update
       respond_to do |format|
         if @type_expenses_user.update(type_expenses_user_params)
-          format.html { redirect_to @type_expenses_user, notice: "Type expenses user was successfully updated." }
+          format.html { redirect_to admin_type_expenses_user_url(@type_expenses_user), notice: "Type expenses user was successfully updated." }
           format.json { render :show, status: :ok, location: @type_expenses_user }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ module Admin
       @type_expenses_user.destroy
   
       respond_to do |format|
-        format.html { redirect_to type_expenses_users_path, status: :see_other, notice: "Type expenses user was successfully destroyed." }
+        format.html { redirect_to admin_type_expenses_users_path, status: :see_other, notice: "Type expenses user was successfully destroyed." }
         format.json { head :no_content }
       end
     end

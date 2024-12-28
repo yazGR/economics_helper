@@ -26,7 +26,7 @@ module Admin
   
       respond_to do |format|
         if @expense.save
-          format.html { redirect_to @expense, notice: "Expense was successfully created." }
+          format.html { redirect_to [:admin, @expense], notice: "Expense was successfully created." }
           format.json { render :show, status: :created, location: @expense }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ module Admin
     def update
       respond_to do |format|
         if @expense.update(expense_params)
-          format.html { redirect_to @expense, notice: "Expense was successfully updated." }
+          format.html { redirect_to [:admin, @expense], notice: "Expense was successfully updated." }
           format.json { render :show, status: :ok, location: @expense }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ module Admin
       @expense.destroy
   
       respond_to do |format|
-        format.html { redirect_to expenses_path, status: :see_other, notice: "Expense was successfully destroyed." }
+        format.html { redirect_to admin_expenses_path, status: :see_other, notice: "Expense was successfully destroyed." }
         format.json { head :no_content }
       end
     end

@@ -15,7 +15,7 @@ module Admin
       @user = User.new(user_params)
       if @user.save 
         session[:user_id] = @user.id
-        redirect_to user_url(@user), notice: "User was successfully create"
+        redirect_to admin_user_url(@user), notice: "User was successfully create"
       else
         render :new
       end
@@ -29,7 +29,7 @@ module Admin
   
     def update
       if @user.update(user_params)
-        redirect_to user_url(@user), notice: "User was successfully update"
+        redirect_to admin_user_url(@user), notice: "User was successfully update"
       else
         render :edit, status: :unprocessable_entity
       end
