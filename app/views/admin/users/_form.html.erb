@@ -1,0 +1,36 @@
+<%= simple_form_for [:admin, @user], html: { class: "w-full"} do |f| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="grid grid-cols-4 gap-4">
+    <%= f.label :name %>
+    <%= f.input :name, label: false %>
+    <%= f.label :last_name%>
+    <%= f.input :last_name, label: false %>
+    <%= f.label :age%>
+    <%= f.input :age, label: false %>
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select(User.translated_genders.map {|translation, k, _v| [translation, k] }) %>
+    <%= f.label :password %>
+    <%= f.input :password, label: false %>
+    <%= f.label :language %>
+    <%= f.select :language, options_for_select(User.translated_languages.map {|translation, k, _v| [translation, k] }) %>
+    <%= f.label :email%>
+    <%= f.input :email, label: false %>
+    <%= f.label :family_plan %>
+    <%= f.check_box :family_plan, as: :boolean %>
+  </div>
+
+  <div class="my-4 flex justify-end">
+    <%= f.button :submit, class: "rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"  %>
+  </div>
+<% end %>

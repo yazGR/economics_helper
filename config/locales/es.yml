@@ -1,0 +1,25 @@
+es:
+  activerecord:
+    attributes:
+      user:
+        age: Edad
+        email: Email
+        family_plan: Plan Familiar
+        gender: Genero
+        gender_list:
+          female: Femenino
+          male: Masculino
+        last_name: Apellido
+        language: Idioma
+        language_list:
+          en: Ingles
+          fr: Frances
+          es: Español
+        name: Nombre
+        number_mortgages: Cantidad de hipotecas
+        mortgages: Hipotecas
+        password: Contraseña
+        property_owner: Propiedades
+        properties: Cantidad de propriedades  
+
+      
