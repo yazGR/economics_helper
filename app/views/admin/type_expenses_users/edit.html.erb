@@ -3,6 +3,6 @@
 
   <%= render "form", type_expenses_user: @type_expenses_user %>
 
-  <%= link_to "Show this type expenses user", @type_expenses_user, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%= link_to "Show this type expenses user", [:admin, @type_expenses_user], class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   <%= link_to "Back to type expenses users", admin_type_expenses_users_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 </div>

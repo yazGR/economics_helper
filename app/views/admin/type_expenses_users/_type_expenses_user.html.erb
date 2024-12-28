@@ -10,7 +10,7 @@
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this type expenses user", type_expenses_user, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Show this type expenses user", [:admin, type_expenses_user], class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to "Edit this type expenses user", edit_admin_type_expenses_user_path(type_expenses_user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
