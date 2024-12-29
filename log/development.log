@@ -2597,3 +2597,653 @@ FOREIGN KEY ("payment_method_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
   [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameNameToNameEnInTypeIncomes (20241228210324)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.0ms)[0m  [1m[35mALTER TABLE "type_incomes" RENAME COLUMN "name" TO "name_en"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228210324"]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToTypeIncomes (20241228210507)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "type_incomes" ADD "name_fr" character varying[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "type_incomes" ADD "name_es" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228210507"]]
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameNameToNameEnInTypeExpenses (20241228210635)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "type_expenses" RENAME COLUMN "name" TO "name_en"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228210635"]]
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToTypeExpenses (20241228210746)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "type_expenses" ADD "name_fr" character varying[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "type_expenses" ADD "name_es" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241228210746"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/type_incomes" for 172.26.0.1 at 2024-12-28 21:10:07 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admin/type_incomes"):
+  
+Started GET "/admin/es/type_incomes" for 172.26.0.1 at 2024-12-28 21:10:33 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#index as HTML
+  Parameters: {"locale"=>"es"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/index.html.erb within layouts/application
+  [1m[36mTypeIncome Load (3.2ms)[0m  [1m[34mSELECT "type_incomes".* FROM "type_incomes"[0m
+  ↳ app/views/admin/type_incomes/index.html.erb:12
+  Rendered collection of admin/type_incomes/_type_income.html.erb [2 times] (Duration: 24.6ms | Allocations: 952)
+  Rendered admin/type_incomes/index.html.erb within layouts/application (Duration: 76.6ms | Allocations: 6550)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 356.0ms | Allocations: 33772)
+Completed 200 OK in 427ms (Views: 348.3ms | ActiveRecord: 22.7ms | Allocations: 38346)
+
+
+Started GET "/admin/es/type_incomes" for 172.26.0.1 at 2024-12-28 21:10:54 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#index as HTML
+  Parameters: {"locale"=>"es"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/index.html.erb within layouts/application
+  [1m[36mTypeIncome Load (9.3ms)[0m  [1m[34mSELECT "type_incomes".* FROM "type_incomes"[0m
+  ↳ app/views/admin/type_incomes/index.html.erb:12
+  Rendered collection of admin/type_incomes/_type_income.html.erb [2 times] (Duration: 2.6ms | Allocations: 347)
+  Rendered admin/type_incomes/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 1478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 9820)
+Completed 200 OK in 66ms (Views: 54.0ms | ActiveRecord: 9.3ms | Allocations: 10266)
+
+
+Started GET "/admin/es/type_incomes" for 172.26.0.1 at 2024-12-28 21:11:27 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#index as HTML
+  Parameters: {"locale"=>"es"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/index.html.erb within layouts/application
+  [1m[36mTypeIncome Load (2.2ms)[0m  [1m[34mSELECT "type_incomes".* FROM "type_incomes"[0m
+  ↳ app/views/admin/type_incomes/index.html.erb:12
+  Rendered collection of admin/type_incomes/_type_income.html.erb [2 times] (Duration: 2.6ms | Allocations: 348)
+  Rendered admin/type_incomes/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 9822)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 2.2ms | Allocations: 10271)
+
+
+Started GET "/admin/en/type_incomes" for 172.26.0.1 at 2024-12-28 21:11:38 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/index.html.erb within layouts/application
+  [1m[36mTypeIncome Load (2.3ms)[0m  [1m[34mSELECT "type_incomes".* FROM "type_incomes"[0m
+  ↳ app/views/admin/type_incomes/index.html.erb:12
+  Rendered collection of admin/type_incomes/_type_income.html.erb [2 times] (Duration: 1.1ms | Allocations: 351)
+  Rendered admin/type_incomes/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1587)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 9923)
+Completed 200 OK in 32ms (Views: 27.3ms | ActiveRecord: 2.3ms | Allocations: 11100)
+
+
+Started GET "/admin/en/type_incomes/new" for 172.26.0.1 at 2024-12-28 21:11:51 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/new.html.erb within layouts/application
+  Rendered admin/type_incomes/_form.html.erb (Duration: 292.9ms | Allocations: 11928)
+  Rendered admin/type_incomes/new.html.erb within layouts/application (Duration: 307.0ms | Allocations: 12365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 322.7ms | Allocations: 20602)
+Completed 200 OK in 326ms (Views: 324.7ms | ActiveRecord: 0.0ms | Allocations: 21214)
+
+
+Started GET "/admin/en/type_incomes/new" for 172.26.0.1 at 2024-12-28 21:12:55 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/new.html.erb within layouts/application
+  Rendered admin/type_incomes/_form.html.erb (Duration: 13.6ms | Allocations: 2571)
+  Rendered admin/type_incomes/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 2990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 11601)
+Completed 200 OK in 69ms (Views: 64.3ms | ActiveRecord: 0.0ms | Allocations: 13073)
+
+
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (21.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "incomes" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "type_incomes_users" DISABLE TRIGGER ALL;ALTER TABLE "type_expenses" DISABLE TRIGGER ALL;ALTER TABLE "type_incomes" DISABLE TRIGGER ALL;ALTER TABLE "type_expenses_users" DISABLE TRIGGER ALL;ALTER TABLE "expenses" DISABLE TRIGGER ALL;ALTER TABLE "payment_methods" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (140.3ms)[0m  [1m[31mDELETE FROM "expenses";
+DELETE FROM "incomes";
+DELETE FROM "payment_methods";
+DELETE FROM "type_expenses";
+DELETE FROM "type_expenses_users";
+DELETE FROM "type_incomes";
+DELETE FROM "type_incomes_users";
+DELETE FROM "users";
+INSERT INTO "expenses" ("id", "user_id", "expensetable_type", "expensetable_id", "amount", "date", "note", "created_at", "updated_at", "payment_method_id") VALUES (980190962, 980190962, 'Expensetable', 980190962, 9.99, '2024-12-27 20:19:24', 'MyString', '2024-12-28 21:28:09.040718', '2024-12-28 21:28:09.040718', DEFAULT), (298486374, 298486374, 'Expensetable', 298486374, 9.99, '2024-12-27 20:19:24', 'MyString', '2024-12-28 21:28:09.040718', '2024-12-28 21:28:09.040718', DEFAULT);
+INSERT INTO "incomes" ("id", "user_id", "incometable_type", "incometable_id", "amount", "date", "note", "created_at", "updated_at") VALUES (980190962, 980190962, 'Incometable', 980190962, 9.99, '2024-12-27 19:46:49', 'MyString', '2024-12-28 21:28:09.055217', '2024-12-28 21:28:09.055217'), (298486374, 298486374, 'Incometable', 298486374, 9.99, '2024-12-27 19:46:49', 'MyString', '2024-12-28 21:28:09.055217', '2024-12-28 21:28:09.055217');
+INSERT INTO "payment_methods" ("id", "name_fr", "name_en", "name_es", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-12-28 21:28:09.061070', '2024-12-28 21:28:09.061070'), (298486374, 'MyString', 'MyString', 'MyString', '2024-12-28 21:28:09.061070', '2024-12-28 21:28:09.061070');
+INSERT INTO "type_expenses" ("id", "name_en", "created_at", "updated_at", "name_fr", "name_es") VALUES (980190962, 'MyString', '2024-12-28 21:28:09.066506', '2024-12-28 21:28:09.066506', 'MyString', 'MyString'), (298486374, 'MyString', '2024-12-28 21:28:09.066506', '2024-12-28 21:28:09.066506', 'MyString', 'MyString');
+INSERT INTO "type_expenses_users" ("id", "name", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 980190962, '2024-12-28 21:28:09.072004', '2024-12-28 21:28:09.072004'), (298486374, 'MyString', 298486374, '2024-12-28 21:28:09.072004', '2024-12-28 21:28:09.072004');
+INSERT INTO "type_incomes" ("id", "name_en", "created_at", "updated_at", "name_fr", "name_es") VALUES (980190962, 'MyString', '2024-12-28 21:28:09.077227', '2024-12-28 21:28:09.077227', 'MyString', 'MyString'), (298486374, 'MyString', '2024-12-28 21:28:09.077227', '2024-12-28 21:28:09.077227', 'MyString', 'MyString');
+INSERT INTO "type_incomes_users" ("id", "name", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 980190962, '2024-12-28 21:28:09.082967', '2024-12-28 21:28:09.082967'), (298486374, 'MyString', 298486374, '2024-12-28 21:28:09.082967', '2024-12-28 21:28:09.082967');
+INSERT INTO "users" ("id", "name", "last_name", "age", "gender", "email", "username", "password_digest", "family_plan", "property_owner", "properties", "mortgages", "number_mortgages", "own_vehicles", "number_vehicles", "financings", "created_at", "updated_at", "language", "role") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, 'MyString', 'MyString', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2024-12-28 21:28:09.088587', '2024-12-28 21:28:09.088587', DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, 'MyString', 'MyString', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2024-12-28 21:28:09.088587', '2024-12-28 21:28:09.088587', DEFAULT, DEFAULT)[0m
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "incomes" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "type_incomes_users" ENABLE TRIGGER ALL;ALTER TABLE "type_expenses" ENABLE TRIGGER ALL;ALTER TABLE "type_incomes" ENABLE TRIGGER ALL;ALTER TABLE "type_expenses_users" ENABLE TRIGGER ALL;ALTER TABLE "expenses" ENABLE TRIGGER ALL;ALTER TABLE "payment_methods" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/admin/en/type_incomes" for 172.26.0.1 at 2024-12-28 21:28:26 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admin/en/type_incomes"):
+  
+Started GET "/en/admin/en/type_incomes" for 172.26.0.1 at 2024-12-28 21:28:50 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/en/admin/en/type_incomes"):
+  
+Started GET "/en/admin/type_incomes" for 172.26.0.1 at 2024-12-28 21:29:03 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::TypeIncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/type_incomes/index.html.erb within layouts/application
+  [1m[36mTypeIncome Load (3.1ms)[0m  [1m[34mSELECT "type_incomes".* FROM "type_incomes"[0m
+  ↳ app/views/admin/type_incomes/index.html.erb:12
+  Rendered collection of admin/type_incomes/_type_income.html.erb [2 times] (Duration: 14.7ms | Allocations: 956)
+  Rendered admin/type_incomes/index.html.erb within layouts/application (Duration: 56.3ms | Allocations: 6551)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 247.3ms | Allocations: 33872)
+Completed 200 OK in 313ms (Views: 234.0ms | ActiveRecord: 22.5ms | Allocations: 38398)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:29:54 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/application
+  [1m[36mPaymentMethod Load (3.4ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [2 times] (Duration: 1.6ms | Allocations: 731)
+  Rendered admin/payment_methods/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 5499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 13874)
+Completed 200 OK in 56ms (Views: 32.2ms | ActiveRecord: 10.1ms | Allocations: 15274)
+
+
+Started GET "/en/admin/payment_methods/new" for 172.26.0.1 at 2024-12-28 21:29:57 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/payment_methods/new.html.erb within layouts/application
+  Rendered admin/payment_methods/_form.html.erb (Duration: 161.4ms | Allocations: 10100)
+  Rendered admin/payment_methods/new.html.erb within layouts/application (Duration: 163.9ms | Allocations: 10516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.9ms | Allocations: 18852)
+Completed 200 OK in 194ms (Views: 191.8ms | ActiveRecord: 0.0ms | Allocations: 19464)
+
+
+Started POST "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:30:25 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "payment_method"=>{"name_fr"=>"Test_fr", "name_en"=>"Test_en", "name_es"=>"Test es"}, "commit"=>"Create Payment method", "locale"=>"en"}
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/payment_methods_controller.rb:28:in `block in create'
+  [1m[36mPaymentMethod Create (2.8ms)[0m  [1m[32mINSERT INTO "payment_methods" ("name_fr", "name_en", "name_es", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name_fr", "Test_fr"], ["name_en", "Test_en"], ["name_es", "Test es"], ["created_at", "2024-12-28 21:30:25.656570"], ["updated_at", "2024-12-28 21:30:25.656570"]]
+  ↳ app/controllers/admin/payment_methods_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/payment_methods_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/en/admin/payment_methods/980190963
+Completed 302 Found in 36ms (ActiveRecord: 22.8ms | Allocations: 3754)
+
+
+Started GET "/en/admin/payment_methods/980190963" for 172.26.0.1 at 2024-12-28 21:30:25 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"980190963"}
+  [1m[36mPaymentMethod Load (1.6ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  ↳ app/controllers/admin/payment_methods_controller.rb:64:in `set_payment_method'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/payment_methods/show.html.erb within layouts/application
+  Rendered admin/payment_methods/_payment_method.html.erb (Duration: 1.0ms | Allocations: 283)
+  Rendered admin/payment_methods/show.html.erb within layouts/application (Duration: 31.8ms | Allocations: 1332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.3ms | Allocations: 9639)
+Completed 200 OK in 101ms (Views: 67.4ms | ActiveRecord: 3.0ms | Allocations: 13973)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:30:28 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/application
+  [1m[36mPaymentMethod Load (4.1ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 4.1ms | Allocations: 530)
+  Rendered admin/payment_methods/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1675)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 10612)
+Completed 200 OK in 75ms (Views: 68.8ms | ActiveRecord: 4.1ms | Allocations: 11054)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:40:09 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (19.2ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 5.4ms | Allocations: 895)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 191.3ms | Allocations: 10391)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/admin.html.erb (Duration: 207.2ms | Allocations: 18982)
+Completed 200 OK in 216ms (Views: 210.8ms | ActiveRecord: 102.1ms | Allocations: 20506)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:44:26 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.9ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 3.6ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 15.4ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/admin.html.erb (Duration: 100.3ms | Allocations: 14879)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 2.9ms | Allocations: 15784)
+
+
+  
+ActionView::Template::Error (Missing partial admin/share/_side_bar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/app/app/views"
+  * "/usr/local/bundle/gems/actiontext-6.1.7.10/app/views"
+  * "/usr/local/bundle/gems/actionmailbox-6.1.7.10/app/views"
+):
+    12:   </head>
+    13: 
+    14:   <body>
+    15:     <%= render "admin/share/side_bar" %>
+    16:     <div class="container px-20">
+    17:       <%= yield %>
+    18:     </div>    
+  
+app/views/layouts/admin.html.erb:15
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:45:27 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (3.4ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 3.8ms | Allocations: 784)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 14.6ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/admin.html.erb (Duration: 80.4ms | Allocations: 12183)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 3.4ms | Allocations: 13060)
+
+
+  
+ActionView::Template::Error (Missing partial admin/share/_side_bar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/app/app/views"
+  * "/usr/local/bundle/gems/actiontext-6.1.7.10/app/views"
+  * "/usr/local/bundle/gems/actionmailbox-6.1.7.10/app/views"
+):
+    12:   </head>
+    13: 
+    14:   <body>
+    15:     <%= render partial: "admin/share/side_bar" %>
+    16:     <div class="container px-20">
+    17:       <%= yield %>
+    18:     </div>    
+  
+app/views/layouts/admin.html.erb:15
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:45:49 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (3.5ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 4.6ms | Allocations: 787)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 28.8ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.9ms | Allocations: 290)
+  Rendered layout layouts/admin.html.erb (Duration: 62.0ms | Allocations: 11440)
+Completed 200 OK in 73ms (Views: 63.9ms | ActiveRecord: 3.5ms | Allocations: 12346)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:46:34 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.5ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 2.9ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 15.1ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 1.8ms | Allocations: 301)
+  Rendered layout layouts/admin.html.erb (Duration: 40.1ms | Allocations: 11393)
+Completed 200 OK in 49ms (Views: 42.5ms | ActiveRecord: 2.5ms | Allocations: 12297)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:48:09 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.8ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 1.8ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 12.9ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 1.1ms | Allocations: 335)
+  Rendered layout layouts/admin.html.erb (Duration: 115.5ms | Allocations: 14175)
+Completed 200 OK in 123ms (Views: 116.9ms | ActiveRecord: 2.8ms | Allocations: 15077)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:49:40 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (4.9ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 3.0ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 16.0ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 1.6ms | Allocations: 348)
+  Rendered layout layouts/admin.html.erb (Duration: 44.1ms | Allocations: 11440)
+Completed 200 OK in 50ms (Views: 43.2ms | ActiveRecord: 4.9ms | Allocations: 12343)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:50:12 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (4.6ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 4.8ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 26.0ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 2.0ms | Allocations: 347)
+  Rendered layout layouts/admin.html.erb (Duration: 49.0ms | Allocations: 11446)
+Completed 200 OK in 62ms (Views: 52.3ms | ActiveRecord: 4.6ms | Allocations: 12357)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:51:29 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (3.1ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 3.0ms | Allocations: 789)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 20.6ms | Allocations: 2271)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 1.0ms | Allocations: 334)
+  Rendered layout layouts/admin.html.erb (Duration: 47.3ms | Allocations: 11484)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 3.1ms | Allocations: 12387)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:52:21 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (4.1ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 4.4ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 17.5ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.8ms | Allocations: 233)
+  Rendered layout layouts/admin.html.erb (Duration: 41.6ms | Allocations: 11325)
+Completed 200 OK in 54ms (Views: 43.6ms | ActiveRecord: 4.1ms | Allocations: 12229)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 21:52:58 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.8ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 4.2ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 16.3ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.6ms | Allocations: 232)
+  Rendered layout layouts/admin.html.erb (Duration: 58.3ms | Allocations: 14080)
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 2.8ms | Allocations: 14982)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 22:02:35 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (3.8ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 3.7ms | Allocations: 783)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 282.8ms | Allocations: 7548)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.9ms | Allocations: 232)
+  Rendered layout layouts/admin.html.erb (Duration: 333.7ms | Allocations: 19337)
+Completed 200 OK in 340ms (Views: 336.8ms | ActiveRecord: 80.8ms | Allocations: 20240)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 22:36:41 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (4.3ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 2.9ms | Allocations: 789)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 125.1ms | Allocations: 7497)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.5ms | Allocations: 204)
+  Rendered layout layouts/admin.html.erb (Duration: 243.9ms | Allocations: 24802)
+Completed 200 OK in 253ms (Views: 250.5ms | ActiveRecord: 55.6ms | Allocations: 25704)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/font-awesome"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/font-awesome"):
+  
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 22:38:12 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.5ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [3 times] (Duration: 3.8ms | Allocations: 530)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 16.9ms | Allocations: 1687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/admin.html.erb (Duration: 90.4ms | Allocations: 18796)
+Completed 200 OK in 94ms (Views: 89.3ms | ActiveRecord: 2.5ms | Allocations: 19197)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/font-awesome"):
+  
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (50.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (27.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "incomes" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "type_incomes_users" DISABLE TRIGGER ALL;ALTER TABLE "type_expenses" DISABLE TRIGGER ALL;ALTER TABLE "type_incomes" DISABLE TRIGGER ALL;ALTER TABLE "type_expenses_users" DISABLE TRIGGER ALL;ALTER TABLE "expenses" DISABLE TRIGGER ALL;ALTER TABLE "payment_methods" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (217.0ms)[0m  [1m[31mDELETE FROM "expenses";
+DELETE FROM "incomes";
+DELETE FROM "payment_methods";
+DELETE FROM "type_expenses";
+DELETE FROM "type_expenses_users";
+DELETE FROM "type_incomes";
+DELETE FROM "type_incomes_users";
+DELETE FROM "users";
+INSERT INTO "expenses" ("id", "user_id", "expensetable_type", "expensetable_id", "amount", "date", "note", "created_at", "updated_at", "payment_method_id") VALUES (980190962, 980190962, 'Expensetable', 980190962, 9.99, '2024-12-27 20:19:24', 'MyString', '2024-12-28 22:42:56.536086', '2024-12-28 22:42:56.536086', DEFAULT), (298486374, 298486374, 'Expensetable', 298486374, 9.99, '2024-12-27 20:19:24', 'MyString', '2024-12-28 22:42:56.536086', '2024-12-28 22:42:56.536086', DEFAULT);
+INSERT INTO "incomes" ("id", "user_id", "incometable_type", "incometable_id", "amount", "date", "note", "created_at", "updated_at") VALUES (980190962, 980190962, 'Incometable', 980190962, 9.99, '2024-12-27 19:46:49', 'MyString', '2024-12-28 22:42:56.597521', '2024-12-28 22:42:56.597521'), (298486374, 298486374, 'Incometable', 298486374, 9.99, '2024-12-27 19:46:49', 'MyString', '2024-12-28 22:42:56.597521', '2024-12-28 22:42:56.597521');
+INSERT INTO "payment_methods" ("id", "name_fr", "name_en", "name_es", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2024-12-28 22:42:56.611233', '2024-12-28 22:42:56.611233'), (298486374, 'MyString', 'MyString', 'MyString', '2024-12-28 22:42:56.611233', '2024-12-28 22:42:56.611233');
+INSERT INTO "type_expenses" ("id", "name_en", "created_at", "updated_at", "name_fr", "name_es") VALUES (980190962, 'MyString', '2024-12-28 22:42:56.620884', '2024-12-28 22:42:56.620884', 'MyString', 'MyString'), (298486374, 'MyString', '2024-12-28 22:42:56.620884', '2024-12-28 22:42:56.620884', 'MyString', 'MyString');
+INSERT INTO "type_expenses_users" ("id", "name", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 980190962, '2024-12-28 22:42:56.626847', '2024-12-28 22:42:56.626847'), (298486374, 'MyString', 298486374, '2024-12-28 22:42:56.626847', '2024-12-28 22:42:56.626847');
+INSERT INTO "type_incomes" ("id", "name_en", "created_at", "updated_at", "name_fr", "name_es") VALUES (980190962, 'MyString', '2024-12-28 22:42:56.633071', '2024-12-28 22:42:56.633071', 'MyString', 'MyString'), (298486374, 'MyString', '2024-12-28 22:42:56.633071', '2024-12-28 22:42:56.633071', 'MyString', 'MyString');
+INSERT INTO "type_incomes_users" ("id", "name", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 980190962, '2024-12-28 22:42:56.639300', '2024-12-28 22:42:56.639300'), (298486374, 'MyString', 298486374, '2024-12-28 22:42:56.639300', '2024-12-28 22:42:56.639300');
+INSERT INTO "users" ("id", "name", "last_name", "age", "gender", "email", "username", "password_digest", "family_plan", "property_owner", "properties", "mortgages", "number_mortgages", "own_vehicles", "number_vehicles", "financings", "created_at", "updated_at", "language", "role") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, 'MyString', 'MyString', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2024-12-28 22:42:56.644947', '2024-12-28 22:42:56.644947', DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, 'MyString', 'MyString', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2024-12-28 22:42:56.644947', '2024-12-28 22:42:56.644947', DEFAULT, DEFAULT)[0m
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "incomes" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "type_incomes_users" ENABLE TRIGGER ALL;ALTER TABLE "type_expenses" ENABLE TRIGGER ALL;ALTER TABLE "type_incomes" ENABLE TRIGGER ALL;ALTER TABLE "type_expenses_users" ENABLE TRIGGER ALL;ALTER TABLE "expenses" ENABLE TRIGGER ALL;ALTER TABLE "payment_methods" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 22:43:20 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.5ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [2 times] (Duration: 14.4ms | Allocations: 1023)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 54.1ms | Allocations: 7115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.5ms | Allocations: 214)
+  Rendered layout layouts/admin.html.erb (Duration: 831.5ms | Allocations: 99371)
+Completed 200 OK in 893ms (Views: 830.6ms | ActiveRecord: 15.7ms | Allocations: 102985)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/font-awesome"):
+  
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 22:49:43 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (19.9ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [2 times] (Duration: 7.9ms | Allocations: 357)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 506.6ms | Allocations: 6778)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:13:in ``': No such file or directory - yarn (Errno::ENOENT)
+	from /usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:13:in `initialize'
+	from /usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:6:in `new'
+	from /usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.7ms | Allocations: 38)
+  Rendered layout layouts/admin.html.erb (Duration: 6950.0ms | Allocations: 16279)
+Completed 200 OK in 7039ms (Views: 6972.4ms | ActiveRecord: 145.6ms | Allocations: 16684)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/font-awesome"):
+  
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 23:05:07 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.7ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [2 times] (Duration: 13.6ms | Allocations: 357)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 127.1ms | Allocations: 6755)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:13:in ``': No such file or directory - yarn (Errno::ENOENT)
+	from /usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:13:in `initialize'
+	from /usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:6:in `new'
+	from /usr/local/bundle/gems/webpacker-5.4.4/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/admin.html.erb (Duration: 6194.1ms | Allocations: 124189)
+Completed 200 OK in 6202ms (Views: 6195.9ms | ActiveRecord: 51.4ms | Allocations: 124591)
+
+
+Started GET "/en/admin/payment_methods" for 172.26.0.1 at 2024-12-28 23:07:25 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PaymentMethodsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/payment_methods/index.html.erb within layouts/admin
+  [1m[36mPaymentMethod Load (2.5ms)[0m  [1m[34mSELECT "payment_methods".* FROM "payment_methods"[0m
+  ↳ app/views/admin/payment_methods/index.html.erb:12
+  Rendered collection of admin/payment_methods/_payment_method.html.erb [2 times] (Duration: 15.2ms | Allocations: 614)
+  Rendered admin/payment_methods/index.html.erb within layouts/admin (Duration: 39.5ms | Allocations: 2107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.8ms | Allocations: 204)
+  Rendered layout layouts/admin.html.erb (Duration: 105.1ms | Allocations: 13510)
+Completed 200 OK in 148ms (Views: 131.9ms | ActiveRecord: 2.5ms | Allocations: 14432)
+
+
