@@ -21,3 +21,8 @@ fr:
         password: Mot de passe
         property_owner: Propriétés
         properties: Nombre de propriétés
+        role: Role
+        role_list:
+          admin: Administrateur
+          user: UUtilisateurser
+          user_family: Utilisateur - Famille 

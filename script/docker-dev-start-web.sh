@@ -10,13 +10,11 @@ if [[ -f ./tmp/pids/server.pid ]]; then
 fi
 
 bundle
-
-if ! [[ -f .db-created ]]; then
-  bin/rails db:drop db:create
+if [[ -f .db-created ]]; then
+  bin/rails db:create
   touch .db-created
 fi
 
-bin/rails db:create
 bin/rails db:migrate
 bin/rails db:fixtures:load
 

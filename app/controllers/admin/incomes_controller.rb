@@ -1,6 +1,7 @@
 module Admin
   class IncomesController < Admin::ApplicationController
     before_action :set_income, only: %i[ show edit update destroy ]
+    before_action :set_incometables, only: %i[new edit]
   
     # GET /incomes or /incomes.json
     def index
@@ -66,7 +67,11 @@ module Admin
   
       # Only allow a list of trusted parameters through.
       def income_params
-        params.require(:income).permit(:user_id, :incometable_id, :incometable_type, :amount, :date, :note)
+        params.require(:income).permit(:user_id, :incometable_gid, :amount, :date, :note)
+      end
+
+      def set_incometables
+        @incometables = TypeIncome.all + TypeIncomesUser.all
       end
   end  
 end

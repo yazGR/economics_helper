@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_12_28_210746) do
-
+ActiveRecord::Schema[7.0].define(version: 2024_12_30_184028) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,10 +19,10 @@ ActiveRecord::Schema.define(version: 2024_12_28_210746) do
     t.string "expensetable_type", null: false
     t.bigint "expensetable_id", null: false
     t.decimal "amount"
-    t.datetime "date"
+    t.datetime "date", precision: nil
     t.string "note"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "payment_method_id"
     t.index ["expensetable_type", "expensetable_id"], name: "index_expenses_on_expensetable"
     t.index ["payment_method_id"], name: "index_expenses_on_payment_method_id"
@@ -35,10 +34,10 @@ ActiveRecord::Schema.define(version: 2024_12_28_210746) do
     t.string "incometable_type", null: false
     t.bigint "incometable_id", null: false
     t.decimal "amount"
-    t.datetime "date"
+    t.datetime "date", precision: nil
     t.string "note"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["incometable_type", "incometable_id"], name: "index_incomes_on_incometable"
     t.index ["user_id"], name: "index_incomes_on_user_id"
   end
@@ -47,14 +46,14 @@ ActiveRecord::Schema.define(version: 2024_12_28_210746) do
     t.string "name_fr"
     t.string "name_en"
     t.string "name_es"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "type_expenses", force: :cascade do |t|
     t.string "name_en"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "name_fr"
     t.string "name_es"
   end
@@ -62,15 +61,15 @@ ActiveRecord::Schema.define(version: 2024_12_28_210746) do
   create_table "type_expenses_users", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_type_expenses_users_on_user_id"
   end
 
   create_table "type_incomes", force: :cascade do |t|
     t.string "name_en"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "name_fr"
     t.string "name_es"
   end
@@ -78,8 +77,8 @@ ActiveRecord::Schema.define(version: 2024_12_28_210746) do
   create_table "type_incomes_users", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_type_incomes_users_on_user_id"
   end
 
@@ -99,8 +98,8 @@ ActiveRecord::Schema.define(version: 2024_12_28_210746) do
     t.boolean "own_vehicles"
     t.decimal "number_vehicles"
     t.boolean "financings"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "language"
     t.string "role"
   end

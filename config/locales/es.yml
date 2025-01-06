@@ -20,6 +20,10 @@ es:
         mortgages: Hipotecas
         password: Contraseña
         property_owner: Propiedades
-        properties: Cantidad de propriedades  
-
+        properties: Cantidad de propriedades
+        role: Role
+        role_list:
+          admin: Admintrador
+          user: Usuario
+          user_family: Usuario - Familia 
       

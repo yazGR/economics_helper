@@ -7,7 +7,9 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.csshttps://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true, type: "module" %>
+
   </head>
 
   <body>

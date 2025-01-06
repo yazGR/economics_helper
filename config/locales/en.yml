@@ -20,4 +20,9 @@ en:
         name: Name   
         password: Password
         property_owner: Properties  
-        properties: Number properties  
+        properties: Number properties 
+        role: Role
+        role_list:
+          admin: Administrator
+          user: User
+          user_family: User - Family 
