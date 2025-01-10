@@ -16,7 +16,6 @@ if [[ -f .db-created ]]; then
 fi
 
 bin/rails db:migrate
-bin/rails db:fixtures:load
 
 if ! [[ -f .db-seeded ]]; then
   bin/rails db:seed

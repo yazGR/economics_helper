@@ -6707,3 +6707,705 @@ Completed 200 OK in 567ms (Views: 232.3ms | ActiveRecord: 177.9ms | Allocations:
 
 
   [1m[36mActiveRecord::SchemaMigration Pluck (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFamilyMembers (20250105211150)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (118.7ms)[0m  [1m[35mCREATE TABLE "family_members" ("id" bigserial primary key, "user" integer, "family_member" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20250105211150"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (15.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (31.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (19.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (29.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (21.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (17.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (92.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/en/admin/incomes/new" for 172.26.0.1 at 2025-01-07 04:41:11 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::IncomesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mTypeIncome Load (4.7ms)[0m  [1m[34mSELECT "type_incomes".* FROM "type_incomes"[0m
+  ↳ app/controllers/admin/incomes_controller.rb:74:in `set_incometables'
+  [1m[36mTypeIncomesUser Load (9.0ms)[0m  [1m[34mSELECT "type_incomes_users".* FROM "type_incomes_users"[0m
+  ↳ app/controllers/admin/incomes_controller.rb:74:in `set_incometables'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/incomes/new.html.erb within layouts/admin
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/incomes/_form.html.erb:16
+  Rendered admin/incomes/_form.html.erb (Duration: 1082.4ms | Allocations: 40589)
+  Rendered admin/incomes/new.html.erb within layouts/admin (Duration: 1088.4ms | Allocations: 41302)
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.6ms | Allocations: 217)
+  Rendered layout layouts/admin.html.erb (Duration: 1244.0ms | Allocations: 88611)
+Completed 200 OK in 1385ms (Views: 1235.2ms | ActiveRecord: 66.2ms | Allocations: 121539)
+
+
+Started GET "/en/admin/incomes" for 172.26.0.1 at 2025-01-07 04:42:30 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::IncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/incomes/index.html.erb within layouts/admin
+  [1m[36mIncome Load (4.7ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes"[0m
+  ↳ app/views/admin/incomes/index.html.erb:12
+  Rendered collection of admin/incomes/_income.html.erb [2 times] (Duration: 6.4ms | Allocations: 850)
+  Rendered admin/incomes/index.html.erb within layouts/admin (Duration: 20.3ms | Allocations: 2498)
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.2ms | Allocations: 43)
+  Rendered layout layouts/admin.html.erb (Duration: 23.3ms | Allocations: 3133)
+Completed 200 OK in 27ms (Views: 19.7ms | ActiveRecord: 4.7ms | Allocations: 3626)
+
+
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (15.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/en/admin/incomes" for 172.26.0.1 at 2025-01-07 21:02:52 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::IncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/incomes/index.html.erb within layouts/admin
+  [1m[36mIncome Load (30.5ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes"[0m
+  ↳ app/views/admin/incomes/index.html.erb:12
+  Rendered collection of admin/incomes/_income.html.erb [2 times] (Duration: 77.3ms | Allocations: 1115)
+  Rendered admin/incomes/index.html.erb within layouts/admin (Duration: 171.4ms | Allocations: 9184)
+  Rendered admin/share/_side_bar.html.erb (Duration: 11.9ms | Allocations: 222)
+  Rendered layout layouts/admin.html.erb (Duration: 592.9ms | Allocations: 56567)
+Completed 200 OK in 768ms (Views: 537.7ms | ActiveRecord: 59.2ms | Allocations: 73422)
+
+
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (29.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (109.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/en/admin/incomes" for 172.26.0.1 at 2025-01-07 21:10:58 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::IncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/incomes/index.html.erb within layouts/admin
+  [1m[36mIncome Load (42.1ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes"[0m
+  ↳ app/views/admin/incomes/index.html.erb:12
+  Rendered collection of admin/incomes/_income.html.erb [2 times] (Duration: 18.7ms | Allocations: 1115)
+  Rendered admin/incomes/index.html.erb within layouts/admin (Duration: 144.8ms | Allocations: 9184)
+  Rendered admin/share/_side_bar.html.erb (Duration: 25.4ms | Allocations: 222)
+  Rendered layout layouts/admin.html.erb (Duration: 722.0ms | Allocations: 56567)
+Completed 200 OK in 844ms (Views: 656.9ms | ActiveRecord: 74.2ms | Allocations: 73415)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFamilyMembers (20250105211150)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFamilyMembers (20250105211150)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.9ms)[0m  [1m[35mDROP TABLE "family_members"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20250105211150"]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFamilyMembers (20250105211150)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (126.8ms)[0m  [1m[35mCREATE TABLE "family_members" ("id" bigserial primary key, "user_id" bigint, "family_member_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (91.4ms)[0m  [1m[35mCREATE INDEX "index_family_members_on_user_id" ON "family_members" ("user_id")[0m
+  [1m[35m (94.5ms)[0m  [1m[35mCREATE INDEX "index_family_members_on_family_member_id" ON "family_members" ("family_member_id")[0m
+  [1m[35m (104.4ms)[0m  [1m[35mALTER TABLE "family_members" ADD CONSTRAINT "fk_rails_b0b0d56ef4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "family_members" ADD CONSTRAINT "fk_rails_7268954ebb"
+FOREIGN KEY ("family_member_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20250105211150"]]
+  [1m[36mTRANSACTION (82.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/en/admin/incomes" for 172.26.0.1 at 2025-01-08 05:22:20 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::IncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/incomes/index.html.erb within layouts/admin
+  [1m[36mIncome Load (29.0ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes"[0m
+  ↳ app/views/admin/incomes/index.html.erb:12
+  Rendered collection of admin/incomes/_income.html.erb [2 times] (Duration: 18.0ms | Allocations: 1115)
+  Rendered admin/incomes/index.html.erb within layouts/admin (Duration: 93.7ms | Allocations: 9184)
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.8ms | Allocations: 218)
+  Rendered layout layouts/admin.html.erb (Duration: 382.2ms | Allocations: 56566)
+Completed 200 OK in 442ms (Views: 335.3ms | ActiveRecord: 50.3ms | Allocations: 73414)
+
+
+Started GET "/en/admin/incomes" for 172.26.0.1 at 2025-01-08 05:22:22 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::IncomesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/incomes/index.html.erb within layouts/admin
+  [1m[36mIncome Load (5.3ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes"[0m
+  ↳ app/views/admin/incomes/index.html.erb:12
+  Rendered collection of admin/incomes/_income.html.erb [2 times] (Duration: 3.3ms | Allocations: 389)
+  Rendered admin/incomes/index.html.erb within layouts/admin (Duration: 23.1ms | Allocations: 1573)
+  Rendered admin/share/_side_bar.html.erb (Duration: 0.7ms | Allocations: 43)
+  Rendered layout layouts/admin.html.erb (Duration: 30.8ms | Allocations: 2209)
+Completed 200 OK in 40ms (Views: 32.0ms | ActiveRecord: 5.3ms | Allocations: 2579)
+
+
+Started GET "/" for 172.26.0.1 at 2025-01-08 05:22:27 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.0ms | Allocations: 299)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 1111)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:22:52 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PublicController):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:24:05 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+NameError (uninitialized constant Web::ApplicationController):
+  
+app/controllers/web/public_controller.rb:2:in `<module:Web>'
+app/controllers/web/public_controller.rb:1:in `<main>'
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:24:55 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/app/controllers/web/applicaion_controller.rb:1: class/module name must be CONSTANT
+  class ApplicationController < Applica...
+       ^~~
+):
+  
+app/controllers/web/applicaion_controller.rb:1: class/module name must be CONSTANT
+app/controllers/web/applicaion_controller.rb:1: class/module name must be CONSTANT
+app/controllers/web/public_controller.rb:2:in `<module:Web>'
+app/controllers/web/public_controller.rb:1:in `<main>'
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:26:08 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms | Allocations: 971)
+
+
+  
+ActionController::MissingExactTemplate (Web::PublicController#home is missing a template for request formats: text/html):
+  
+actionpack (7.0.8.7) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.8.7) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.8.7) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.8.7) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.8.7) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.8.7) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.8.7) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.8.7) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.8.7) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.8.7) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.8.7) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.8.7) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.8.7) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.8.7) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8.7) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8.7) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8.7) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8.7) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.10) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.10) lib/rack/etag.rb:27:in `call'
+rack (2.2.10) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.10) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/http/content_security_policy.rb:39:in `call'
+rack (2.2.10) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.10) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8.7) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.7) lib/rails/rack/logger.rb:25:in `call'
+propshaft (1.1.0) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.10) lib/rack/method_override.rb:24:in `call'
+rack (2.2.10) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.10) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+railties (7.0.8.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.9) lib/puma/configuration.rb:252:in `call'
+puma (5.6.9) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.9) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.9) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.9) lib/puma/server.rb:443:in `process_client'
+puma (5.6.9) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:26:44 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 1072)
+
+
+  
+ActionController::MissingExactTemplate (Web::PublicController#home is missing a template for request formats: text/html):
+  
+actionpack (7.0.8.7) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.8.7) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.8.7) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.8.7) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.8.7) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.8.7) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.8.7) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.8.7) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.8.7) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.8.7) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.8.7) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.8.7) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.8.7) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.8.7) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.8.7) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8.7) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8.7) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8.7) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8.7) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.10) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.10) lib/rack/etag.rb:27:in `call'
+rack (2.2.10) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.10) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/http/content_security_policy.rb:39:in `call'
+rack (2.2.10) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.10) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8.7) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.7) lib/rails/rack/logger.rb:25:in `call'
+propshaft (1.1.0) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.10) lib/rack/method_override.rb:24:in `call'
+rack (2.2.10) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.10) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.7) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+railties (7.0.8.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.9) lib/puma/configuration.rb:252:in `call'
+puma (5.6.9) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.9) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.9) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.9) lib/puma/server.rb:443:in `process_client'
+puma (5.6.9) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:27:10 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering web/public/home.html.erb within layouts/application
+  Rendered web/public/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1790)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 2795)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000035890>):
+     8:     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+     9: 
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_importmap_tags %>
+    13:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    14:     <%= stylesheet_link_tag "application" %>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/en" for 172.26.0.1 at 2025-01-08 05:27:54 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering web/public/home.html.erb within layouts/application
+  Rendered web/public/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 883)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 1864)
+
+
+  [1m[35m (27.2ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (15.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (119.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/en" for 172.26.0.1 at 2025-01-09 04:14:45 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering web/public/home.html.erb within layouts/application
+  Rendered web/public/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 335.3ms | Allocations: 47354)
+Completed 200 OK in 653ms (Views: 440.1ms | ActiveRecord: 0.0ms | Allocations: 62607)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-09 04:52:02 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering web/public/home.html.erb within layouts/application
+  Rendered web/public/home.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1449)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 1537)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 2653)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000001ecd0>):
+    1: <% if current_user %>
+    2:   <h1>Welcome, <%= current_user.name %></h1>
+    3: <% else %>
+    4:   <h1>This is the index page</h1>
+  
+app/views/web/public/home.html.erb:1
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/en" for 172.26.0.1 at 2025-01-09 04:55:08 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering web/public/home.html.erb within layouts/application
+  Rendered web/public/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 47639)
+Completed 200 OK in 128ms (Views: 86.6ms | ActiveRecord: 0.0ms | Allocations: 62901)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:20:59 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 1.1ms | Allocations: 289)
+  Rendered web/share/_navbar.html.erb (Duration: 0.7ms | Allocations: 187)
+  Rendered layout layouts/web.html.erb (Duration: 124.2ms | Allocations: 2553)
+Completed 200 OK in 369ms (Views: 126.9ms | ActiveRecord: 0.0ms | Allocations: 48292)
+
+
+Started GET "/docs/images/people/profile-picture-3.jpg" for 172.26.0.1 at 2025-01-09 05:21:00 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/docs/images/people/profile-picture-3.jpg"):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:24:58 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 1.0ms | Allocations: 280)
+  Rendered web/share/_navbar.html.erb (Duration: 0.7ms | Allocations: 247)
+  Rendered layout layouts/web.html.erb (Duration: 22.0ms | Allocations: 2562)
+Completed 200 OK in 159ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 48117)
+
+
+Started GET "/docs/images/people/profile-picture-3.jpg" for 172.26.0.1 at 2025-01-09 05:24:58 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/docs/images/people/profile-picture-3.jpg"):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:26:21 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 2.4ms | Allocations: 275)
+  Rendered web/share/_navbar.html.erb (Duration: 1.0ms | Allocations: 246)
+  Rendered layout layouts/web.html.erb (Duration: 11.2ms | Allocations: 1431)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 2274)
+
+
+Started GET "/docs/images/people/profile-picture-3.jpg" for 172.26.0.1 at 2025-01-09 05:26:21 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/docs/images/people/profile-picture-3.jpg"):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:27:05 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 1.1ms | Allocations: 275)
+  Rendered web/share/_navbar.html.erb (Duration: 3.6ms | Allocations: 245)
+  Rendered layout layouts/web.html.erb (Duration: 12.0ms | Allocations: 1429)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 2245)
+
+
+Started GET "/docs/images/people/profile-picture-3.jpg" for 172.26.0.1 at 2025-01-09 05:27:05 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/docs/images/people/profile-picture-3.jpg"):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:28:20 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 5.7ms | Allocations: 275)
+  Rendered web/share/_navbar.html.erb (Duration: 1.3ms | Allocations: 246)
+  Rendered layout layouts/web.html.erb (Duration: 15.1ms | Allocations: 1431)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 2249)
+
+
+Started GET "/docs/images/people/profile-picture-3.jpg" for 172.26.0.1 at 2025-01-09 05:28:21 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/docs/images/people/profile-picture-3.jpg"):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:29:07 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 2.3ms | Allocations: 275)
+  Rendered web/share/_navbar.html.erb (Duration: 1.1ms | Allocations: 247)
+  Rendered layout layouts/web.html.erb (Duration: 12.0ms | Allocations: 1431)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:29:25 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 2.7ms | Allocations: 275)
+  Rendered web/share/_navbar.html.erb (Duration: 1.6ms | Allocations: 245)
+  Rendered layout layouts/web.html.erb (Duration: 10.7ms | Allocations: 1429)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 2244)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:32:27 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 1.3ms | Allocations: 275)
+  Rendered web/share/_navbar.html.erb (Duration: 2.4ms | Allocations: 333)
+  Rendered layout layouts/web.html.erb (Duration: 10.7ms | Allocations: 1517)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 2333)
+
+
+Started GET "/user_sessions/new?locale=en" for 172.26.0.1 at 2025-01-09 05:32:31 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserSessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 122.2ms | Allocations: 3701)
+  Rendered layout layouts/application.html.erb (Duration: 136.2ms | Allocations: 4468)
+Completed 200 OK in 365ms (Views: 150.6ms | ActiveRecord: 90.0ms | Allocations: 24425)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:32:34 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 0.5ms | Allocations: 108)
+  Rendered web/share/_navbar.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered layout layouts/web.html.erb (Duration: 4.4ms | Allocations: 800)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1152)
+
+
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:33:58 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 1.7ms | Allocations: 286)
+  Rendered web/share/_navbar.html.erb (Duration: 2.4ms | Allocations: 325)
+  Rendered layout layouts/web.html.erb (Duration: 9.6ms | Allocations: 1532)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 2505)
+
+
+Started GET "/user_sessions/new?locale=en" for 172.26.0.1 at 2025-01-09 05:34:00 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant UserSessionsController):
+  
+Started GET "/user_sessions/new?locale=en" for 172.26.0.1 at 2025-01-09 05:34:24 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/user_sessions/new"):
+  
+Started GET "/en" for 172.26.0.1 at 2025-01-09 05:34:29 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::PublicController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/public/home.html.erb within layouts/web
+  Rendered web/public/home.html.erb within layouts/web (Duration: 3.2ms | Allocations: 140)
+  Rendered web/share/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/web.html.erb (Duration: 7.7ms | Allocations: 879)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+Started GET "/en/user_sessions/new" for 172.26.0.1 at 2025-01-09 05:34:31 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Web::UserSessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/web.html.erb
+  Rendering web/user_sessions/new.html.erb within layouts/web
+  Rendered web/user_sessions/new.html.erb within layouts/web (Duration: 3.7ms | Allocations: 980)
+  Rendered web/share/_navbar.html.erb (Duration: 0.6ms | Allocations: 118)
+  Rendered layout layouts/web.html.erb (Duration: 7.0ms | Allocations: 1712)
+Completed 200 OK in 57ms (Views: 8.6ms | ActiveRecord: 18.8ms | Allocations: 10033)
+
+

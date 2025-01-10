@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   scope "/:locale" do
+    root to: "web/public#home"
+
     namespace :admin do    
       resources :users
       resources :family_members
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
     end
 
     scope module: 'web' do
-      resources :users
+      resources :user_sessions, only: [:new, :create]
     end
   end  
   

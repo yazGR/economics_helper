@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_12_30_184028) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_05_211150) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +27,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_30_184028) do
     t.index ["expensetable_type", "expensetable_id"], name: "index_expenses_on_expensetable"
     t.index ["payment_method_id"], name: "index_expenses_on_payment_method_id"
     t.index ["user_id"], name: "index_expenses_on_user_id"
+  end
+
+  create_table "family_members", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "family_member_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["family_member_id"], name: "index_family_members_on_family_member_id"
+    t.index ["user_id"], name: "index_family_members_on_user_id"
   end
 
   create_table "incomes", force: :cascade do |t|
@@ -106,6 +115,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_30_184028) do
 
   add_foreign_key "expenses", "payment_methods"
   add_foreign_key "expenses", "users"
+  add_foreign_key "family_members", "users"
+  add_foreign_key "family_members", "users", column: "family_member_id"
   add_foreign_key "incomes", "users"
   add_foreign_key "type_expenses_users", "users"
   add_foreign_key "type_incomes_users", "users"
