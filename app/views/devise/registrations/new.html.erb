@@ -1,0 +1,33 @@
+<div class="justify-self-center">
+  <h2 class="text-3xl font-semibold text-green-900">Sign up</h2>
+
+  <%= form_with scope: resource_name, url: registration_path(resource_name), class: "mt-5", local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border border-green-900 rounded-sm focus:outline-2 focus:outline-offset-4 focus:outline-green-900 focus:border-0" %>
+    </div>
+
+    <div class="field mt-4">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class: "border border-green-900 rounded-sm focus:outline-2 focus:outline-offset-4 focus:outline-green-900 focus:border-0" %>
+    </div>
+
+    <div class="field mt-4">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "border border-green-900 rounded-sm focus:outline-2 focus:outline-offset-4 focus:outline-green-900 focus:border-0" %>
+    </div>
+
+    <div class="actions mt-4">
+      <%= f.submit "Sign up", class: "w-full bg-green-600 text-white py-2 rounded-xl shadow
+                hover:bg-green-700 hover:shadow-lg transition-all duration-200" %>
+    </div>
+  <% end %>
+  <div class="mt-5">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

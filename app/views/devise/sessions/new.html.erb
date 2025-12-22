@@ -1,0 +1,33 @@
+<div class="justify-self-center">
+  <h2 class="text-3xl font-semibold text-green-900">Log in</h2>
+
+  <%= form_with scope: resource_name, url: session_path(resource_name), class: "mt-5", local: true do |f|  %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border border-green-900 rounded-sm focus:outline-2 focus:outline-offset-4 focus:outline-green-900 focus:border-0" %>
+    </div>
+
+    <div class="field mt-4">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class: "border border-green-900 rounded-sm focus:outline-2 focus:outline-offset-4 focus:outline-green-900 focus:border-0" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "w-full bg-green-600 text-white py-2 rounded-xl shadow
+              hover:bg-green-700 hover:shadow-lg transition-all duration-200" %>
+    </div>
+  <% end %>
+
+  <div class="mt-5">
+    <%= render "devise/shared/links" %>
+  </div>
+
+</div>
+

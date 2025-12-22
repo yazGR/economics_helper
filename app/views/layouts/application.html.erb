@@ -6,13 +6,24 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
     <%= render "shared/navbar"%>
-    <main class="container mx-auto mt-20">
+    <% if user_signed_in? %>
+      <%= render "shared/sidebar"%>
+    <% end%>
+    <main class="<%= class_names('container p-4 mt-20', 'sm:ml-64' => user_signed_in?
+) %>">
       <%= yield %>
     </main>
   </body>

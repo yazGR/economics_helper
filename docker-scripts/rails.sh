@@ -10,8 +10,8 @@
 # echo "seed database"
 # bundle exec rake db:seed
 
-# echo "Running BUNDLE INSTALL for rails..."
-# bundle install
+echo "Running BUNDLE INSTALL for rails..."
+bundle install
 
 echo "Starting rails app server ..."
 cd /app
