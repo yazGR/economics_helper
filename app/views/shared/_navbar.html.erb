@@ -14,14 +14,14 @@
       </div>
       <div class="flex items-center">
         <% if user_signed_in? %>
-          <div class="flex items-center ms-3">
+          <div class="flex items-center ms-3 relative" data-controller="menu">
             <div>
-              <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+              <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-action="click->menu#toggle">
                 <span class="sr-only">Open user menu</span>
                 <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
               </button>
             </div>
-            <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="dropdown-user">
+            <div class="hidden z-60 top-10 right-0 bg-white absolute border border-default-medium border-green-900 rounded-md shadow-lg w-44" data-menu-target="panel">
               <div class="px-4 py-3 border-b border-default-medium" role="none">
                 <p class="text-sm font-medium text-heading" role="none">
                   Neil Sims
@@ -32,16 +32,11 @@
               </div>
               <ul class="p-2 text-sm text-body font-medium" role="none">
                 <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Dashboard</a>
-                </li>
-                <li>
                   <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Settings</a>
                 </li>
                 <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Earnings</a>
-                </li>
-                <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Sign out</a>
+                  <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" %>
+                  <%# <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Sign out</a> %>
                 </li>
               </ul>
             </div>

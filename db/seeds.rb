@@ -9,7 +9,7 @@
 puts "🌱 Creando usuario master..."
 
 master_email = ENV.fetch("MASTER_EMAIL", "master@admin.com")
-master_password = ENV.fetch("MASTER_PASSWORD", "ChangeMe123!")
+master_password = ENV.fetch("MASTER_PASSWORD", "Admin1234")
 
 master = User.find_or_initialize_by(email: master_email)
 
