@@ -22,6 +22,10 @@ class User < ApplicationRecord
     role == "user"
   end
 
+  def full_name?
+    "#{name} #{last_name}"
+  end
+
   private
 
   def set_default_role

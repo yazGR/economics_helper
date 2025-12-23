@@ -24,10 +24,10 @@
             <div class="hidden z-60 top-10 right-0 bg-white absolute border border-default-medium border-green-900 rounded-md shadow-lg w-44" data-menu-target="panel">
               <div class="px-4 py-3 border-b border-default-medium" role="none">
                 <p class="text-sm font-medium text-heading" role="none">
-                  Neil Sims
+                  <%= current_user.full_name? %>
                 </p>
                 <p class="text-sm text-body truncate" role="none">
-                  neil.sims@flowbite.com
+                  <%= current_user.email %>
                 </p>
               </div>
               <ul class="p-2 text-sm text-body font-medium" role="none">
