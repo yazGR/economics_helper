@@ -16,7 +16,9 @@ master = User.find_or_initialize_by(email: master_email)
 if master.new_record?
   master.password = master_password
   master.password_confirmation = master_password
-  master.role = "master"
+  master.name = "User"
+  master.last_name = "Admin"
+  master.role = "admin"
   master.save!
   puts "✅ Usuario master creado: #{master_email}"
 else

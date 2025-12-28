@@ -4,15 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  ROLES = %w[user admin master].freeze
+  ROLES = %w[user admin].freeze
 
   validates :role, inclusion: { in: ROLES }
 
   after_initialize :set_default_role, if: :new_record?
-
-  def master?
-    role == "master"
-  end
 
   def admin?
     role == "admin"
